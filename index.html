@@ -1,91 +1,311 @@
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <meta name="description" content="Academic website of Aditya Srivastava, working on financial economics, information economics, banking and financial stability.">
+
   <title>Aditya Srivastava | Economics</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+
   <style>
-    :root { --ink:#20252b; --muted:#68727d; --line:#e5e8eb; --accent:#315b73; --paper:#fff; --wash:#f7f8f8; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.7 "DM Sans",Arial,sans-serif; }
-    a { color:var(--accent); text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    .wrap { max-width:900px; margin:0 auto; padding:0 28px; }
-    header { border-bottom:1px solid var(--line); }
-    .top { display:flex; justify-content:space-between; align-items:center; gap:24px; padding:22px 0; }
-    .brand { font-family:"Source Serif 4",Georgia,serif; font-size:20px; font-weight:600; color:var(--ink); }
-    nav { display:flex; flex-wrap:wrap; gap:22px; font-size:14px; }
-    nav a { color:var(--muted); }
-    main { padding:62px 0 80px; }
-    .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.12em; font-size:11px; font-weight:600; }
-    h1,h2,h3 { font-family:"Source Serif 4",Georgia,serif; font-weight:500; line-height:1.2; }
-    h1 { font-size:48px; margin:10px 0 8px; letter-spacing:-.035em; }
-    .subtitle { color:var(--muted); font-size:18px; margin:0 0 22px; }
-    .intro { max-width:760px; font-size:17px; }
+    :root {
+      --ink: #20252b;
+      --muted: #68727d;
+      --line: #e5e8eb;
+      --accent: #315b73;
+      --paper: #fff;
+      --wash: #f7f8f8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 16px/1.7 "DM Sans", Arial, sans-serif;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      padding: 22px 0;
+    }
+
+    .brand {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      font-size: 14px;
+    }
+
+    nav a {
+      color: var(--muted);
+    }
+
+    main {
+      padding: 62px 0 80px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    h1, h2, h3 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin: 10px 0 8px;
+      letter-spacing: -.035em;
+    }
+
+    h2 {
+      font-size: 29px;
+      margin: 0 0 20px;
+    }
+
+    h3 {
+      font-size: 21px;
+      margin: 0 0 5px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 18px;
+      margin: 0 0 22px;
+    }
+
+    /* About section */
+
     .about-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 240px;
-  gap: 42px;
-  align-items: center;
-}
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 260px;
+      gap: 48px;
+      align-items: center;
+    }
 
-.about-text {
-  min-width: 0;
-}
+    .about-text {
+      min-width: 0;
+    }
 
-.about-image img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 12px;
-  display: block;
-}
-    .links { display:flex; flex-wrap:wrap; gap:18px; margin:24px 0 0; font-size:14px; }
-    .links a { border-bottom:1px solid #b9c8d0; padding-bottom:2px; }
-    section { border-top:1px solid var(--line); margin-top:54px; padding-top:30px; }
-    h2 { font-size:29px; margin:0 0 20px; }
-    h3 { font-size:21px; margin:0 0 5px; }
-    .item { padding:0 0 23px; margin:0 0 22px; border-bottom:1px solid #eef0f1; }
-    .item:last-child { border-bottom:0; margin-bottom:0; }
-    .meta { color:var(--muted); font-size:13px; margin:3px 0 9px; }
-    .tagline { color:var(--muted); font-size:14px; }
-    .note { background:var(--wash); border-left:3px solid #cbd7dd; padding:13px 16px; color:#56616a; font-size:13px; margin-top:18px; }
-    .grid { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
-    ul { padding-left:19px; margin:8px 0 0; }
-    li { margin:5px 0; }
-    footer { border-top:1px solid var(--line); color:var(--muted); font-size:13px; padding:24px 0 36px; }
-    .button { display:inline-block; border:1px solid #cbd5da; padding:8px 13px; border-radius:4px; font-size:14px; }
-    @media (max-width:650px) {
-      .top { align-items:flex-start; flex-direction:column; gap:10px; }
-      nav { gap:14px; }
-      main { padding-top:42px; }
-      h1 { font-size:39px; }
-      .grid { grid-template-columns:1fr; gap:8px; }
-      .wrap { padding:0 21px; }
+    .intro {
+      font-size: 17px;
+    }
+
+    .about-image img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin: 24px 0 0;
+      font-size: 14px;
+    }
+
+    .links a {
+      border-bottom: 1px solid #b9c8d0;
+      padding-bottom: 2px;
+    }
+
+    /* General sections */
+
+    section {
+      border-top: 1px solid var(--line);
+      margin-top: 54px;
+      padding-top: 30px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: -12px;
+      margin-bottom: 26px;
+    }
+
+    .subheading {
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 32px 0 18px;
+    }
+
+    .item {
+      padding: 0 0 23px;
+      margin: 0 0 22px;
+      border-bottom: 1px solid #eef0f1;
+    }
+
+    .item:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 3px 0 9px;
+    }
+
+    .tagline {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .paper-link {
+      display: inline-block;
+      margin-top: 5px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .paper-link::before {
+      content: "↗ ";
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    ul {
+      padding-left: 19px;
+      margin: 8px 0 0;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      padding: 24px 0 36px;
+    }
+
+    .button {
+      display: inline-block;
+      border: 1px solid #cbd5da;
+      padding: 8px 13px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    /* Responsive layout */
+
+    @media (max-width: 700px) {
       .about-layout {
-  grid-template-columns: 1fr;
-  gap: 25px;
-}
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
 
-.about-image {
-  max-width: 220px;
-}
+      .about-image {
+        max-width: 220px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .top {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav {
+        gap: 14px;
+      }
+
+      main {
+        padding-top: 42px;
+      }
+
+      h1 {
+        font-size: 39px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .wrap {
+        padding: 0 21px;
+      }
     }
   </style>
 </head>
+
 <body>
+
 <header>
   <div class="wrap top">
     <a class="brand" href="#">Aditya Srivastava</a>
+
     <nav aria-label="Main navigation">
       <a href="#about">About</a>
       <a href="#research">Research</a>
       <a href="#experience">Experience</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#education">Education</a>
       <a href="#cv">CV</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -93,132 +313,427 @@
 </header>
 
 <main class="wrap">
+
+  <!-- ABOUT -->
+
   <div id="about" class="about-layout">
-  <div class="about-text">
-    <div class="eyebrow">Economics</div>
-    <h1>Aditya Srivastava</h1>
-    <p class="subtitle">Financial economics · Information economics · Banking and financial stability</p>
-    <p class="intro">
-      I am an economist working at the intersection of financial economics,
-      information economics and microeconomic theory. My research interests
-      centre on financial intermediation, banking and financial stability,
-      with a particular focus on how information frictions, strategic
-      interaction and networks shape coordination in financial markets.
-      My research experience spans theoretical modelling, global games,
-      information economics and empirical analysis of sovereign debt distress.
-    </p>
-    <div class="links">
-      <a href="CV_Aditya_Srivastava.pdf">Curriculum vitae (PDF)</a>
-      <a href="mailto:adi.srivas02@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/aditya-srivastava-a54aa8206/" target="_blank" rel="noopener">LinkedIn</a>
+
+    <div class="about-text">
+      <div class="eyebrow">Economics</div>
+
+      <h1>Aditya Srivastava</h1>
+
+      <p class="subtitle">
+        Financial economics · Information economics · Banking and financial stability
+      </p>
+
+      <p class="intro">
+        I am an economist working at the intersection of financial economics,
+        information economics and microeconomic theory. My research interests
+        centre on financial intermediation, banking and financial stability,
+        with a particular focus on how information frictions, strategic
+        interaction and networks shape coordination in financial markets.
+        My research experience spans theoretical modelling, global games,
+        information economics and empirical analysis of sovereign debt distress.
+      </p>
+
+      <div class="links">
+        <a href="CV_Aditya_Srivastava.pdf">Curriculum vitae (PDF)</a>
+        <a href="mailto:adi.srivas02@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/aditya-srivastava-a54aa8206/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
+
+    <div class="about-image">
+      <img src="profile.png" alt="Aditya Srivastava">
+    </div>
+
   </div>
 
-  <div class="about-image">
-<img src="profile.png" alt="Aditya Srivastava">
-  </div>
-</div>
+
+  <!-- RESEARCH -->
 
   <section id="research">
+
     <h2>Research</h2>
+
+    <p class="section-intro">
+      Selected research papers, Master's theses and collaborative projects.
+    </p>
+
+    <h3 class="subheading">Master's theses</h3>
+
     <article class="item">
       <h3>Regulatory Communication, Investor Networks &amp; Bank Runs</h3>
-      <div class="meta">Master's thesis · Institut Polytechnique de Paris / HEC Paris · 2026</div>
+
+      <div class="meta">
+        Master's thesis · Institut Polytechnique de Paris / HEC Paris · 2026
+      </div>
+
       <p>
-        Develops a theoretical framework examining how regulatory communication and
-        investor networks shape coordination under information frictions. The project
-        was conducted in collaboration with the Deutsche Bundesbank Research Centre.
+        Develops two theoretical extensions of the global-games framework
+        to examine how regulatory communication and investor networks shape
+        coordination under information frictions. The project studies
+        coarse regulatory disclosure and the role of network information
+        in determining higher-order beliefs and strategic uncertainty.
+        Conducted in collaboration with the Deutsche Bundesbank Research Centre.
       </p>
-      <p class="tagline">Supervisors: Kartik Anand and Jean-Édouard Colliard</p>
-      
+
+      <p class="tagline">
+        Supervisors: Kartik Anand and Jean-Édouard Colliard
+      </p>
+
+      <a class="paper-link"
+         href="HEC_Thesis_Aditya_Srivastava.pdf"
+         target="_blank" rel="noopener">
+        Read thesis (PDF)
+      </a>
     </article>
+
 
     <article class="item">
       <h3>Rationally Inattentive Acquisition of Information in Dynamic Global Games</h3>
-      <div class="meta">Master's thesis · London School of Economics · 2024</div>
+
+      <div class="meta">
+        Master's dissertation · London School of Economics · 2024
+      </div>
+
       <p>
-        Master's research on information acquisition in dynamic global games.
+        Studies information acquisition and strategic behaviour in dynamic
+        global games, with a focus on rational inattention and the role of
+        information in coordination.
       </p>
-      <p class="tagline">Supervisor: Olivier Gossner</p>
+
+      <p class="tagline">
+        Supervisor: Olivier Gossner
+      </p>
+
+      <a class="paper-link"
+         href="LSE_Thesis_Aditya_Srivastava.pdf"
+         target="_blank" rel="noopener">
+        Read dissertation (PDF)
+      </a>
     </article>
+
+
+    <h3 class="subheading">Theoretical research projects</h3>
+
+    <article class="item">
+      <h3>Beyond Blackwell: Towards a General Theory of Informativeness in Signals</h3>
+
+      <div class="meta">
+        Research project · École Polytechnique / CREST · 2025
+      </div>
+
+      <p>
+        Investigates the comparison of information structures beyond
+        Blackwell's classical framework, focusing on Lehmann precision,
+        monotone quasi-garbling and the implications of information
+        orderings for multidimensional decision problems.
+      </p>
+
+      <p class="tagline">
+        Research supervisor: Olivier Gossner
+      </p>
+
+      <a class="paper-link"
+         href="Beyond_Blackwell_Aditya_Srivastava.pdf"
+         target="_blank" rel="noopener">
+        Read research paper (PDF)
+      </a>
+    </article>
+
+
+    <article class="item">
+      <h3>Uncertainty and the Le Châtelier Principle: A Lattice Theory Perspective</h3>
+
+      <div class="meta">
+        Research report · INSEAD / École Polytechnique · 2025
+      </div>
+
+      <p>
+        Examines how uncertainty affects the Le Châtelier principle
+        using lattice-theoretic methods. The project studies comparative
+        statics in stochastic environments and the implications of
+        uncertainty for economic adjustment.
+      </p>
+
+      <p class="tagline">
+        Research supervisor: Timothy Van Zandt
+      </p>
+
+      <a class="paper-link"
+         href="Uncertainty_Le_Chatelier_Aditya_Srivastava.pdf"
+         target="_blank" rel="noopener">
+        Read research report (PDF)
+      </a>
+    </article>
+
+
+    <h3 class="subheading">Empirical research projects</h3>
+
+    <article class="item">
+      <h3>Detecting Fiscal Thresholds in Eurozone Convenience Yields</h3>
+
+      <div class="meta">
+        Macroeconometrics and Machine Learning Project · 2026
+      </div>
+
+      <p>
+        Examines whether Eurozone sovereign bond convenience yields respond
+        nonlinearly to fiscal fundamentals. Using annual panel data for
+        nine countries from 2008–2025, the project compares fixed-effects
+        and threshold regressions with Random Forest and XGBoost models.
+        Out-of-sample results indicate that tree-based models improve
+        predictive performance, while partial dependence analysis suggests
+        state-dependent relationships between fiscal conditions and
+        sovereign bond pricing.
+      </p>
+
+      <p class="tagline">
+        Collaborative project with Aleksandra Zachorowska and Zhaonan Chu
+      </p>
+
+      <a class="paper-link"
+         href="Macroeconometrics_ML_Project_Aditya_Srivastava.pdf"
+         target="_blank" rel="noopener">
+        Read research report (PDF)
+      </a>
+    </article>
+
+
+    <h3 class="subheading">Ongoing research</h3>
 
     <article class="item">
       <h3>Sovereign Debt Distress and Early-Warning Systems</h3>
-      <div class="meta">Ongoing research · Finance for Development Lab, CEPREMAP</div>
+
+      <div class="meta">
+        Ongoing research · Finance for Development Lab, CEPREMAP · 2026–present
+      </div>
+
       <p>
-        Current work involves econometric analysis of sovereign debt distress using
-        macroeconomic and financial data, and reproducing and extending the Lab's
-        predictive framework. Planned extensions explore machine-learning and
-        Mixture-of-Experts approaches.
+        Current work involves econometric analysis of sovereign debt
+        distress using macroeconomic and financial data, and reproducing
+        and extending the Lab's predictive framework. Planned extensions
+        explore machine-learning and Mixture-of-Experts approaches.
       </p>
-      <span class="tagline">A public-facing extended abstract or policy output can be linked here when cleared for release.</span>
     </article>
+
   </section>
+
+
+  <!-- RESEARCH EXPERIENCE -->
 
   <section id="experience">
+
     <h2>Research experience</h2>
+
     <div class="item">
       <h3>Finance for Development Lab — CEPREMAP, Paris School of Economics</h3>
-      <div class="meta">Senior Research Analyst · Paris · September 2026–present</div>
-      <p>Econometric analysis of sovereign debt distress and extensions to the Lab's predictive framework.</p>
+
+      <div class="meta">
+        Senior Research Analyst · Paris · September 2026–present
+      </div>
+
+      <p>
+        Econometric analysis of sovereign debt distress and extensions
+        to the Lab's predictive framework.
+      </p>
     </div>
+
+
     <div class="item">
       <h3>Deutsche Bundesbank — Research Centre</h3>
-      <div class="meta">Research Intern · Frankfurt · March–September 2026</div>
-      <p>Developed two global-games models on regulatory communication, investor networks and financial coordination.</p>
+
+      <div class="meta">
+        Research Intern · Frankfurt · March–September 2026
+      </div>
+
+      <p>
+        Developed two global-games models on regulatory communication,
+        investor networks and financial coordination.
+      </p>
     </div>
+
+
     <div class="item">
       <h3>INSEAD</h3>
-      <div class="meta">Research and Teaching Assistant · April 2025–present</div>
-      <p>Theoretical research with Professor Timothy Van Zandt, extending the Le Châtelier principle to stochastic environments using lattice-theoretic methods; teaching assistance in Applied Microeconomics and Industrial Organization.</p>
+
+      <div class="meta">
+        Research Assistant to Professor Timothy Van Zandt · April–September 2025
+      </div>
+
+      <p>
+        Theoretical research extending the Le Châtelier principle to
+        stochastic environments using lattice-theoretic methods.
+      </p>
     </div>
+
+
     <div class="item">
       <h3>École Polytechnique — ENSAE — CREST</h3>
-      <div class="meta">Research Assistant to Professor Olivier Gossner · September 2024–April 2025</div>
-      <p>Research on comparison of information structures, Blackwell sufficiency, Lehmann precision orderings and monotone quasi-garbling.</p>
+
+      <div class="meta">
+        Research Assistant to Professor Olivier Gossner · September 2024–April 2025
+      </div>
+
+      <p>
+        Research on comparison of information structures, Blackwell
+        sufficiency, Lehmann precision orderings and monotone quasi-garbling.
+      </p>
     </div>
+
+
     <div class="item">
       <h3>United Nations Conference on Trade and Development (UNCTAD)</h3>
-      <div class="meta">Policy Research Intern · New Delhi · August–September 2021</div>
-      <p>Analysed firm-level data using quasi-experimental methods to evaluate policies supporting small and medium-sized enterprises.</p>
+
+      <div class="meta">
+        Policy Research Intern · New Delhi · August–September 2021
+      </div>
+
+      <p>
+        Analysed firm-level data using quasi-experimental methods to
+        evaluate policies supporting small and medium-sized enterprises.
+      </p>
     </div>
+
   </section>
+
+
+  <!-- TEACHING EXPERIENCE -->
+
+  <section id="teaching">
+
+    <h2>Teaching experience</h2>
+
+    <p class="section-intro">
+      Contract-based teaching at the MBA and Master in Management levels.
+    </p>
+
+    <div class="item">
+      <h3>INSEAD</h3>
+
+      <div class="meta">
+        Tutor · Master in Management (MiM) Programme · 2025 and 2026
+      </div>
+
+      <p>
+        Applied Microeconomics — tutoring Master in Management students,
+        working with Professor Vladimir Mares.
+      </p>
+    </div>
+
+
+    <div class="item">
+      <h3>INSEAD</h3>
+
+      <div class="meta">
+        Tutor · MBA Programme · 2026
+      </div>
+
+      <p>
+        Prices and Markets — tutoring MBA students,
+        working with Professor Vladimir Mares.
+      </p>
+    </div>
+
+  </section>
+
+
+  <!-- EDUCATION -->
 
   <section id="education">
+
     <h2>Education</h2>
+
     <div class="item">
       <h3>Institut Polytechnique de Paris — HEC Paris</h3>
-      <div class="meta">Master in Economics · 2024–2026 · Très Bien (16.3/20)</div>
-      <p>Thesis: <em>Regulatory Communication, Investor Networks &amp; Bank Runs</em> (18/20).</p>
+
+      <div class="meta">
+        Master in Economics · 2024–2026 · Très Bien (16.3/20)
+      </div>
+
+      <p>
+        Thesis: <em>Regulatory Communication, Investor Networks &amp; Bank Runs</em>
+        (18/20).
+      </p>
     </div>
+
+
     <div class="item">
       <h3>London School of Economics and Political Science</h3>
-      <div class="meta">MSc Applicable Mathematics · 2023–2024 · Merit</div>
-      <p>Thesis: <em>Rationally Inattentive Acquisition of Information in Dynamic Global Games</em>.</p>
+
+      <div class="meta">
+        MSc Applicable Mathematics · 2023–2024 · Merit
+      </div>
+
+      <p>
+        Thesis: <em>Rationally Inattentive Acquisition of Information
+        in Dynamic Global Games</em>.
+      </p>
     </div>
+
+
     <div class="item">
       <h3>Shaheed Bhagat Singh College, University of Delhi</h3>
-      <div class="meta">BSc (Hons.) Mathematics · 2020–2023 · CGPA 8.99/10</div>
-      <p>College Silver Medallist; First Division with High Distinction.</p>
+
+      <div class="meta">
+        BSc (Hons.) Mathematics · 2020–2023 · CGPA 8.99/10
+      </div>
+
+      <p>
+        College Silver Medallist; First Division.
+      </p>
     </div>
+
   </section>
+
+
+  <!-- CV -->
 
   <section id="cv">
+
     <h2>Curriculum vitae</h2>
-    <p>For a fuller account of my education, research experience, awards, workshops and technical skills, please see my CV.</p>
-    <a class="button" href="CV_Aditya_Srivastava.pdf">Download CV (PDF)</a>
+
+    <p>
+      For a fuller account of my education, research experience,
+      teaching, awards, workshops and technical skills, please see my CV.
+    </p>
+
+    <a class="button" href="CV_Aditya_Srivastava.pdf">
+      Download CV (PDF)
+    </a>
+
   </section>
+
+
+  <!-- CONTACT -->
 
   <section id="contact">
+
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:adi.srivas02@gmail.com">adi.srivas02@gmail.com</a></p>
+
+    <p>
+      Email:
+      <a href="mailto:adi.srivas02@gmail.com">adi.srivas02@gmail.com</a>
+    </p>
+
     <p>Based in Paris, France.</p>
+
   </section>
+
 </main>
 
+
 <footer>
-  <div class="wrap">© <span id="year"></span> Aditya Srivastava</div>
+  <div class="wrap">
+    © <span id="year"></span> Aditya Srivastava
+  </div>
 </footer>
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
